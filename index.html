@@ -24,7 +24,17 @@
 
 	<h1> What is your age? </h1>
 	<input id = "userAge">
-	
+
+	<h1> select option below </h1>
+	<select name = "list.php" id = "list">
+
+		<option value = "Apple"> Apple </option>
+		<option value = "Orange"> Orange </option>
+		<option value = "Banana"> Banana </option>
+
+	</select>
+
+
 	<button onclick = "foo()"> Submit </button>
 </body>
 
@@ -34,7 +44,8 @@
 		
 		let userName = document.querySelector("#userName");
 		let userAge = document.querySelector("#userAge");
-		alert("Hello there " + userName.value + ", " + userAge.value);
+		let fruit = document.querySelector("#list");
+		alert("Hello there " + userName.value + ", " + userAge.value + ", " + fruit.value);
 
 	}
 
