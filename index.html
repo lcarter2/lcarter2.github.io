@@ -18,20 +18,37 @@
 <div id="form-section">
 	<div class="container">
 		<body>
-			<h1> What is your name? </h1>
+			<h1> Enter name </h1>
 			<input id = "userName">
 
-			<h1> What is your age? </h1>
-			<input id = "userAge">
+			<h1> Enter email </h1>
+			<input id = "userEmail">
 
-			<h1> select option below </h1>
-			<select name = "list.php" id = "list">
+			<h1> Charge Number </h1>
+			<input id = "chargeNum">
 
-				<option value = "Apple"> Apple </option>
-				<option value = "Orange"> Orange </option>
-				<option value = "Banana"> Banana </option>
+			<h1> Quantity of item </h1>
+			<input id = "quantity">
+
+			<h1> Select Urgency </h1>
+			<select name = "list.php" id = "urgency">
+
+				<option value = "Low"> Low </option>
+				<option value = "Medium"> Medium </option>
+				<option value = "High"> High </option>
 
 			</select>
+
+			<h1> Want product Sanded? </h1>
+			<select name = "list.php" id = "sanded">
+
+				<option value = "Yes"> Yes </option>
+				<option value = "No"> No </option>
+
+			</select>
+
+			
+
 
 
 			<button onclick = "foo()"> Submit </button>
@@ -42,8 +59,8 @@
 			function foo(){
 				
 				let userName = document.querySelector("#userName");
-				let userAge = document.querySelector("#userAge");
-				let fruit = document.querySelector("#list");
+				let userAge = document.querySelector("#userEmail");
+				let fruit = document.querySelector("#urgency");
 				alert("Hello there " + userName.value + ", " + userAge.value + ", " + fruit.value);
 
 			}
