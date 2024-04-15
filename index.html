@@ -19,12 +19,21 @@
 
 
 <body>
-	<form id="form" onsubmit="return false;">
-	<input   style=position:absolute;top:80%;left:5%;width:40%; type="text" id="userInput">
-	<input   style=position:absolute;top:50%;left:5%;width:40%; type="submit"    onclick="foo()">
-	</form>
+	<h1> What is your name? </h1>
+	<input id = "userInput">
+	<button onclick = "foo()"> Submit </button>
 </body>
 
+<script>
+
+	function foo(){
+		
+		let userInput = document.querySelector("#userInput");
+		alert("Hello there " + userInput.value);
+
+	}
+
+</script>
 
 
 
