@@ -20,7 +20,11 @@
 
 <body>
 	<h1> What is your name? </h1>
-	<input id = "userInput">
+	<input id = "userName">
+
+	<h1> What is your age? </h1>
+	<input id = "userAge">
+	
 	<button onclick = "foo()"> Submit </button>
 </body>
 
@@ -28,8 +32,9 @@
 
 	function foo(){
 		
-		let userInput = document.querySelector("#userInput");
-		alert("Hello there " + userInput.value);
+		let userName = document.querySelector("#userName");
+		let userAge = document.querySelector("#userAge");
+		alert("Hello there " + userName.value + ", " + userAge.value);
 
 	}
 
