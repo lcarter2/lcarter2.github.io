@@ -85,7 +85,7 @@
 			<button onclick = "recordResonse()"> Submit </button>
 			
 
-			<button type="button" id="button">run Python</button>
+			<button type="button" id="button">run Python!</button>
 
 			<py-script>
 				from js import document 
@@ -93,6 +93,7 @@
 				import MYSCRIPT
 
 				def runPython():
+					MYSCRIPT.main()
 					print("you clicked me")
 
 				function_proxy = create_proxy(runPython)
