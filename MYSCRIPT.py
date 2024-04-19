@@ -24,5 +24,5 @@ def update_files(directory):
         
         
 def main():
-    update_files('C:\\ForLogan\\MSTestCases\\Foo')
+    #update_files('C:\\ForLogan\\MSTestCases\\Foo')
     print('Done')
