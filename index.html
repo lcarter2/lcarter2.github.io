@@ -88,17 +88,21 @@
 			<button type="button" id="button">run Python!</button>
 
 			<py-script>
-				from js import document 
-				from pyodide import create_proxy
-				import MYSCRIPT
-
-				def runPython():
-					MYSCRIPT.main()
-					print("you clicked me")
-
-				function_proxy = create_proxy(runPython)
-
-				document.getElementById("button").addEventListener("click", function_proxy)
+				from openpyxl import load_workbook
+				filename = '100_sally.xlsx'
+				wb = load_workbook(filename)
+				ws = wb['Form']
+				
+				old_num = ws['C5'].value
+				new_num = filename.split('_')[0]
+				
+				if int(old_num) != int(new_num):
+					print(old_num, " -> ", new_num)
+				
+				ws.cell(row=5, column=3).value = int(new_num)
+				
+				wb.save(filename)
+				wb.close()
 			</py-script>
 
 
