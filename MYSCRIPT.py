@@ -23,6 +23,6 @@ def update_files(directory):
             wb.close()
         
         
-if __name__ == '__main__':
+def main():
     update_files('C:\\ForLogan\\MSTestCases\\Foo')
     print('Done')
