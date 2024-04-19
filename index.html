@@ -83,16 +83,24 @@
 			<br /> 
 
 			<button onclick = "recordResonse()"> Submit </button>
-			<input type="button" id='script' name="scriptbutton" py-onClick="my_func()">
-			<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+			
+
+			<button type="button" id="button">run Python</button>
 
 			<py-script>
-				import MYSCRIPT
+				from js import document 
+				from pyodide import create_proxy
 
+				def runPython():
+					print("you clicked me")
 
-				def my_func():
-					MYSCRIPT.main()
+				function_proxy = create_proxy(runPython)
+
+				document.getElementById("button").addEventListener("click", function_proxy)
 			</py-script>
+
+
+
 			<br /> 
 			<br /> 
 			<br /> 
