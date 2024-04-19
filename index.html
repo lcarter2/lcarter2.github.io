@@ -2,6 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	<link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+	<script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+
 	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 	<meta http-equiv="Pragma" content="no-cache">
 	<meta http-equiv="Expires" content="0">
@@ -78,19 +83,16 @@
 			<br /> 
 
 			<button onclick = "recordResonse()"> Submit </button>
-			<input type="button" id='script' name="scriptbutton" value=" Run Script " onclick="goPython()">
+			<input type="button" id='script' name="scriptbutton" py-onClick="my_func()">
 			<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
-			<script>
-				function goPython(){
-					$.ajax({
-					url: "MYSCRIPT.py",
-					context: document.body
-					}).done(function() {
-					alert('finished python script');;
-					});
-				}
-			</script>
+			<py-script>
+				import MYSCRIPT
+
+
+				def my_func():
+					MYSCRIPT.main()
+			</py-script>
 			<br /> 
 			<br /> 
 			<br /> 
